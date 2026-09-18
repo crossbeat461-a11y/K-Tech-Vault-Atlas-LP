@@ -8,10 +8,7 @@
 
 フレームワークは使いません。静的ファイルだけです。
 
-## まだやっていないこと
-
-- GitHub への **push はしていません**（依頼どおり）
-- Vercel の公開 URL は未設定です。公開したら `index.html` の canonical / OG を絶対 URL に直します
+公開: https://k-tech-vault-atlas-lp.vercel.app/
 
 ## ローカルで見る
 
@@ -26,6 +23,7 @@ http://localhost:8080
 
 | 項目 | 値 |
 |------|-----|
+| LP | https://k-tech-vault-atlas-lp.vercel.app/ |
 | プラグイン本体 | https://github.com/crossbeat461-a11y/K-Tech-Vault-Atlas |
 | Releases | https://github.com/crossbeat461-a11y/K-Tech-Vault-Atlas/releases/latest |
 | Community plugins | https://obsidian.md/plugins?id=k-tech-vault-atlas |

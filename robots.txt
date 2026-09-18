@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://k-tech-vault-atlas-lp.vercel.app/sitemap.xml
