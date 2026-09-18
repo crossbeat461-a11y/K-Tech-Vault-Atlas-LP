@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" role="img">
+  <rect width="880" height="340" rx="16" fill="#1e1e1e"/>
+  <text x="28" y="40" fill="#a78bfa" font-size="16" font-family="sans-serif" font-weight="700">êó¯nt</text>
+  <g font-family="sans-serif" font-size="14">
+    <rect x="40" y="80" width="200" height="80" rx="12" fill="#7c3aed"/>
+    <text x="140" y="126" text-anchor="middle" fill="#fff">Home.md</text>
+    <path d="M250 120 H340" stroke="#a78bfa" stroke-width="3"/>
+    <polygon points="340,114 356,120 340,126" fill="#a78bfa"/>
+    <rect x="360" y="80" width="200" height="80" rx="12" fill="#262626" stroke="#3d3d3d"/>
+    <text x="460" y="126" text-anchor="middle" fill="#dcddde">Projects.md</text>
+    <path d="M460 160 V210" stroke="#fca5a5" stroke-width="3" stroke-dasharray="6 6"/>
+    <text x="476" y="200" fill="#fca5a5" font-size="12">*êó¯</text>
+    <rect x="360" y="220" width="200" height="80" rx="12" fill="#2a2438" stroke="#fbbf24"/>
+    <text x="460" y="266" text-anchor="middle" fill="#fbbf24">A>.md</text>
+    <rect x="620" y="220" width="220" height="80" rx="12" fill="#14532d"/>
+    <text x="730" y="254" text-anchor="middle" fill="#86efac">ýY‹</text>
+    <text x="730" y="278" text-anchor="middle" fill="#bbf7d0" font-size="12">[[A>]] ’ª HUB x</text>
+  </g>
+</svg>

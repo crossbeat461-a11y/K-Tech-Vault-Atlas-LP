@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" role="img">
+  <rect width="880" height="280" rx="16" fill="#1e1e1e"/>
+  <text x="28" y="40" fill="#a78bfa" font-size="16" font-family="sans-serif" font-weight="700">Homepage #:</text>
+  <g font-family="sans-serif">
+    <rect x="28" y="68" width="360" height="180" rx="12" fill="#262626"/>
+    <text x="52" y="108" fill="#fff" font-size="15">Homepage ×é°¤ó</text>
+    <text x="52" y="140" fill="#94a3b8" font-size="13">wÕÎüÈ kind: File</text>
+    <text x="52" y="176" fill="#dcddde" font-size="14">‹: Home.md</text>
+    <text x="52" y="208" fill="#64748b" font-size="12">-šo­ÖnøMÛHjD</text>
+    <path d="M400 158 H500" stroke="#a78bfa" stroke-width="3"/>
+    <polygon points="500,152 516,158 500,164" fill="#a78bfa"/>
+    <rect x="528" y="68" width="324" height="180" rx="12" fill="#2a2438" stroke="#7c3aed"/>
+    <text x="552" y="108" fill="#fff" font-size="15">Vault Atlas neã</text>
+    <text x="552" y="140" fill="#a78bfa" font-size="13">	¹jeã = Homepage</text>
+    <text x="552" y="176" fill="#dcddde" font-size="14">ãzgMjDhMoKÕÑ¹</text>
+    <text x="552" y="208" fill="#64748b" font-size="12">Home.md *\j‰\gM‹</text>
+  </g>
+</svg>
