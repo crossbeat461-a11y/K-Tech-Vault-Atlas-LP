@@ -1,24 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" role="img">
-  <rect width="880" height="420" rx="16" fill="#1e1e1e"/>
-  <text x="28" y="40" fill="#a78bfa" font-size="16" font-family="sans-serif" font-weight="700">Quick scan</text>
-  <rect x="28" y="60" width="824" height="48" rx="10" fill="#262626"/>
-  <text x="48" y="90" fill="#dcddde" font-size="14" font-family="sans-serif">eã Home.md · HUB 12 · ¨h 3 · êó¯³ 2 · zÕ©ëÀ 1</text>
-  <g font-family="sans-serif" font-size="14">
-    <rect x="28" y="128" width="824" height="52" rx="8" fill="#262626"/>
-    <text x="48" y="160" fill="#86efac">âX HUB</text>
-    <text x="160" y="160" fill="#dcddde">Projects/Projects.md</text>
-    <text x="520" y="160" fill="#94a3b8">íÃ¯jW</text>
-    <rect x="28" y="192" width="824" height="52" rx="8" fill="#2a2438"/>
-    <text x="48" y="224" fill="#fbbf24">¨h</text>
-    <text x="160" y="224" fill="#dcddde">Clients/  ·  md 8 ö</text>
-    <text x="520" y="224" fill="#a78bfa">È°ë ON g\</text>
-    <rect x="28" y="256" width="824" height="52" rx="8" fill="#262626"/>
-    <text x="48" y="288" fill="#fca5a5">ªêó¯</text>
-    <text x="160" y="288" fill="#dcddde">A> L Projects.md K‰*êó¯</text>
-    <text x="520" y="288" fill="#a78bfa">1¯êÃ¯gı</text>
-    <rect x="28" y="320" width="824" height="52" rx="8" fill="#262626"/>
-    <text x="48" y="352" fill="#94a3b8">İY</text>
-    <text x="160" y="352" fill="#dcddde">Archive/  · Bhg</text>
-    <text x="520" y="352" fill="#64748b">ÎüÈL—H_‰;Y</text>
-  </g>
-</svg>
