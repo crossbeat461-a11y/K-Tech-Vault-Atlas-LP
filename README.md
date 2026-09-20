@@ -30,3 +30,5 @@ http://localhost:8080
 | Buy Me a Coffee | https://buymeacoffee.com/k_tech_studio |
 | K-Tech Studio | https://k-tech-lab.vercel.app/ |
 | 版 | 1.0.4（プラグインの `manifest.json` に合わせる） |
+| GA4 測定 ID | `G-1FDKV9VGWS`（K-Tech Vault Atlas LP 専用。会社HPの `G-774DT6CW0W` は使わない） |
+| Search Console 確認ファイル | `google8a8913465dda62dd.html`（他 LP と同一トークン） |

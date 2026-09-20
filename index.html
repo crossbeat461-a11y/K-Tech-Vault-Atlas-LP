@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FDKV9VGWS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1FDKV9VGWS');
+    </script>
+    <script>
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest('a');
+        if (!link || !link.href) return;
+        var href = link.href;
+        var eventName = null;
+        var linkType = null;
+        if (href.indexOf('buymeacoffee.com') !== -1) {
+          eventName = 'click_bmc';
+          linkType = 'bmc';
+        } else if (href.indexOf('/releases') !== -1) {
+          eventName = 'click_release';
+          linkType = 'release';
+        } else if (href.indexOf('github.com') !== -1) {
+          eventName = 'click_github';
+          linkType = 'github';
+        } else if (href.indexOf('obsidian.md/plugins') !== -1) {
+          eventName = 'click_community';
+          linkType = 'community';
+        }
+        if (!eventName) return;
+        gtag('event', eventName, {
+          link_url: href,
+          link_text: (link.textContent || '').trim().slice(0, 100),
+          link_type: linkType
+        });
+      });
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-Tech Vault Atlas v1.0.4 | フォルダと HUB の地図をスキャンする Obsidian プラグイン</title>
@@ -596,7 +632,7 @@
                 <p style="font-size: 0.85rem;">利用者の責任において使用してください。損害について一切の責任を負いません。</p>
                 <div class="policy-content">
                     <h4>プライバシーポリシー</h4>
-                    <p>この LP は、現時点でアクセス解析を入れていません。プラグイン本体のスキャンは端末内だけで、テレメトリはありません。Buy Me a Coffee はクリックしたときだけブラウザで開きます。</p>
+                    <p>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。Cookie で収集されるデータは匿名であり、個人を特定するものではありません。プラグイン本体は完全にローカルで動作し、テレメトリはありません。Buy Me a Coffee はクリックしたときだけブラウザで開きます。</p>
 
                     <h4>免責事項</h4>
                     <p>当サイトからリンクによって移動された先のサイトで提供される情報・サービスについて、一切の責任を負いません。</p>
