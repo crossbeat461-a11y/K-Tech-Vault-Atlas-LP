@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-Tech Vault Atlas | ファイルが増えても、入口から辿れるようにする</title>
-    <meta name="description" content="Vault のフォルダと HUB（MOC）をスキャンし、足りない地図をパネルのトグルで直します。ファイルが増えた人も、使い方が分からない人も、入口から辿れる状態にするためのプラグインです。完全オフライン。無料・MIT。">
+    <title>K-Tech Vault Atlas v1.0.4 | フォルダと HUB の地図をスキャンする Obsidian プラグイン</title>
+    <meta name="description" content="K-Tech Vault Atlas は Obsidian 用コミュニティプラグイン（v1.0.4）。フォルダと HUB（MOC）をスキャンし、足りない地図をパネルのトグルで直します。ファイルが増えた人も、使い方が分からない人も、入口から辿れる状態にします。完全オフライン。無料・MIT。">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="K-Tech Studio">
     <meta name="theme-color" content="#7c3aed">
@@ -15,20 +15,22 @@
     <link rel="sitemap" type="application/xml" href="https://k-tech-vault-atlas-lp.vercel.app/sitemap.xml">
     <meta property="og:site_name" content="K-Tech Studio">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="K-Tech Vault Atlas | Find your way when the vault grew">
-    <meta property="og:description" content="Scan folders and hub notes, then fix gaps with toggles. Built for vaults that got big, and for people still learning the layout.">
+    <meta property="og:title" content="K-Tech Vault Atlas v1.0.4 | Scan folder and hub maps in Obsidian">
+    <meta property="og:description" content="Obsidian community plugin. Scan folders and hub notes, then fix gaps with toggles. Built for vaults that got big, and for people still learning the layout. Offline. Free &amp; MIT.">
     <meta property="og:url" content="https://k-tech-vault-atlas-lp.vercel.app/">
     <meta property="og:image" content="https://k-tech-vault-atlas-lp.vercel.app/images/og.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="K-Tech Vault Atlas — ファイルが増えても、入口から辿れるようにする">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:locale:alternate" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@K_Tech_Dev">
-    <meta name="twitter:title" content="K-Tech Vault Atlas">
-    <meta name="twitter:description" content="Scan folders and hubs. Fix gaps one toggle at a time. Offline.">
+    <meta name="twitter:title" content="K-Tech Vault Atlas v1.0.4 | Scan folder and hub maps in Obsidian">
+    <meta name="twitter:description" content="Obsidian community plugin. Scan folders and hubs, then fix gaps one toggle at a time. Offline. Free &amp; MIT.">
     <meta name="twitter:image" content="https://k-tech-vault-atlas-lp.vercel.app/images/og.jpg">
+    <meta name="twitter:image:alt" content="K-Tech Vault Atlas — ファイルが増えても、入口から辿れるようにする">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -50,18 +52,69 @@
         },
         {
           "@type": "SoftwareApplication",
+          "@id": "https://k-tech-vault-atlas-lp.vercel.app/#app",
           "name": "K-Tech Vault Atlas",
           "url": "https://k-tech-vault-atlas-lp.vercel.app/",
           "image": "https://k-tech-vault-atlas-lp.vercel.app/images/og.jpg",
+          "description": "Obsidian community plugin that scans folder and hub (MOC) layout, then lets you fix gaps from one panel with toggles, link append, Deep Scan, Folder Guide, and report export. Fully offline.",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Obsidian",
           "softwareVersion": "1.0.4",
+          "datePublished": "2026-09-18",
+          "dateModified": "2026-09-20",
           "isAccessibleForFree": true,
           "license": "https://github.com/crossbeat461-a11y/K-Tech-Vault-Atlas/blob/main/LICENSE",
           "downloadUrl": "https://github.com/crossbeat461-a11y/K-Tech-Vault-Atlas/releases/latest",
           "installUrl": "https://obsidian.md/plugins?id=k-tech-vault-atlas",
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+          "keywords": "Obsidian, vault, hub, MOC, folder scan, Deep Scan, offline",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY", "availability": "https://schema.org/InStock" },
           "author": { "@id": "https://k-tech-lab.vercel.app/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://k-tech-vault-atlas-lp.vercel.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "HUB とは何ですか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "フォルダの目次ノートです。frontmatter の type: hub（設定で変更可）で判定します。いわゆる MOC と同じ役割です。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "ノートは消えますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "HUB を OFF にしたときだけ、その HUB ファイルをゴミ箱へ移します。確認があります。通常のメモは対象外です。最終的な削除は Obsidian の「削除したファイル」設定に従います。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "公式 Sync は必要ですか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "不要です。スキャンはローカル Vault だけを見ます。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "どうやって入れますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Obsidian の Community plugins から「K-Tech Vault Atlas」を検索して Install → Enable です。手動のときは GitHub Release の main.js / manifest.json / styles.css をプラグインフォルダへ置きます。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "必要な Obsidian の版は？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "1.8.7 以降です。"
+              }
+            }
+          ]
         }
       ]
     }
@@ -307,7 +360,7 @@
             </div>
             <p class="note lang-ja">設定 → Community plugins → Browse で「K-Tech Vault Atlas」を検索。ID は <code>k-tech-vault-atlas</code>。</p>
             <p class="note lang-en">Settings → Community plugins → Browse, then search “K-Tech Vault Atlas”. ID: <code>k-tech-vault-atlas</code>.</p>
-            <img class="shot" src="images/hero-map.jpg" alt="" width="920" height="520">
+            <img class="shot" src="images/hero-map.jpg" alt="入口、すでにある HUB、まだ無い HUB、触ってほしくないフォルダの一覧イメージ" width="920" height="520" decoding="async">
             <p class="caption lang-ja">入口、すでにある HUB、まだ無い HUB、触ってほしくないフォルダを、先に一覧にします。</p>
             <p class="caption lang-en">It lists the entry, hubs you already have, hubs still missing, and folders you do not want touched — first.</p>
             <p class="note lang-ja">画像は画面の構成を示すものです。お使いのテーマやモードで、実際の表示は変わります。</p>
@@ -381,7 +434,7 @@
                 <h3 class="lang-en">Quick scan — see the map as a list</h3>
                 <p class="lang-ja">入口の有無、HUB の件数、推奨フォルダ、親 HUB からの未リンク、入口から未リンクの HUB、保留中のフォルダを一度に出します。Vault の外には何も送りません。</p>
                 <p class="lang-en">It lists whether the entry exists, hub counts, recommended folders, missing parent links, hubs not linked from the entry, and deferred folders. Nothing leaves the vault.</p>
-                <img class="shot" src="images/feature-scan.jpg" alt="" width="880" height="420">
+                <img class="shot" src="images/feature-scan.jpg" alt="通常スキャンの件数とフォルダ一覧のイメージ" width="880" height="420" loading="lazy" decoding="async">
             </article>
 
             <article class="feature">
@@ -389,7 +442,7 @@
                 <h3 class="lang-en">Hub toggles — create or step back in one place</h3>
                 <p class="lang-ja">推奨行のトグルを ON にすると、フォルダ名に合わせたテンプレで HUB ノートを作ります。OFF にすると HUB をゴミ箱へ移し、そのフォルダは保留リストに入ります。ノートが増えたら「再検討」に戻します。確認ダイアログを挟みます。</p>
                 <p class="lang-en">Turn a recommendation ON to create a hub from a template named after the folder. Turn OFF to trash the hub and defer the folder. If note count grows, it comes back for review. A confirm dialog sits in between.</p>
-                <img class="shot" src="images/feature-toggle.jpg" alt="" width="880" height="360">
+                <img class="shot" src="images/feature-toggle.jpg" alt="HUB を作る・やめるトグルと確認のイメージ" width="880" height="360" loading="lazy" decoding="async">
             </article>
 
             <article class="feature">
@@ -397,7 +450,7 @@
                 <h3 class="lang-en">Link gaps — append to parent and entry in one click</h3>
                 <p class="lang-ja">子 HUB があるのに親の本文に無い、入口から辿れない、という穴を出します。wikilink を追記するだけで、フォルダの移動はしません。</p>
                 <p class="lang-en">It finds child hubs missing from the parent note, and hubs missing from the entry. It only appends wikilinks. It does not move folders.</p>
-                <img class="shot" src="images/feature-links.jpg" alt="" width="880" height="340">
+                <img class="shot" src="images/feature-links.jpg" alt="親 HUB と入口へリンクを追記するイメージ" width="880" height="340" loading="lazy" decoding="async">
             </article>
 
             <article class="feature">
@@ -405,7 +458,7 @@
                 <h3 class="lang-en">Deep Scan — protect hand-written maps, decide what to skip</h3>
                 <p class="lang-ja">入口ノート、frontmatter の <code>hub-managed: external</code>、Deep Scan で付けた保護は削除できません。Inbox や Daily、設定フォルダは除外候補として出します。フォルダ構成を大きく変えたときだけ走らせれば十分です。</p>
                 <p class="lang-en">The entry note, <code>hub-managed: external</code>, and Deep Scan protection cannot be deleted. Inbox, Daily, and the vault config folder show up as exclude suggestions. Run this when the layout actually changed.</p>
-                <img class="shot" src="images/feature-deep-scan.jpg" alt="" width="880" height="400">
+                <img class="shot" src="images/feature-deep-scan.jpg" alt="Deep Scan の保護と除外候補のイメージ" width="880" height="400" loading="lazy" decoding="async">
             </article>
 
             <article class="feature">
@@ -413,7 +466,7 @@
                 <h3 class="lang-en">Folder Guide — empty, nested-only, naming drift</h3>
                 <p class="lang-ja">空フォルダ、ノートが無くサブフォルダだけの場所、名前が近いフォルダを報告します。自動ではリネームも移動もしません。人が見てから決めます。</p>
                 <p class="lang-en">It reports empty folders, folders that only contain subfolders, and near-duplicate names. It never renames or moves them. You decide.</p>
-                <img class="shot" src="images/feature-folder-guide.jpg" alt="" width="880" height="320">
+                <img class="shot" src="images/feature-folder-guide.jpg" alt="空フォルダ・一段まとめ・命名のゆれを報告するイメージ" width="880" height="320" loading="lazy" decoding="async">
             </article>
 
             <article class="feature">
@@ -421,7 +474,7 @@
                 <h3 class="lang-en">Homepage integration — use the startup note as the entry</h3>
                 <p class="lang-ja">Homepage プラグインが入っていれば、起動ノート（kind: File）を Atlas の入口にできます。Homepage の設定は読み取るだけで、書き換えません。解決できないときは手動パス（既定 Home.md）に戻します。無ければ作成できます。</p>
                 <p class="lang-en">If the Homepage plugin is enabled, Atlas can use its startup note (kind: File) as the entry. It only reads Homepage settings. If that fails, it falls back to the manual path (default Home.md), which you can create.</p>
-                <img class="shot" src="images/feature-homepage.jpg" alt="" width="880" height="280">
+                <img class="shot" src="images/feature-homepage.jpg" alt="Homepage の起動ノートを入口にするイメージ" width="880" height="280" loading="lazy" decoding="async">
             </article>
 
             <article class="feature">
@@ -429,7 +482,7 @@
                 <h3 class="lang-en">Reports — save in the vault or copy</h3>
                 <p class="lang-ja">スキャン結果を Markdown にして、設定したフォルダ（既定 <code>90 System/Vault Atlas/</code>）へ保存できます。クリップボードへコピーもできます。除外ルールは Vault Profile として端末内の <code>data.json</code> に残ります。</p>
                 <p class="lang-en">Export the scan as Markdown into a folder you choose (default <code>90 System/Vault Atlas/</code>), or copy it. Exclude rules stay in local <code>data.json</code> as the Vault Profile.</p>
-                <img class="shot" src="images/feature-report.jpg" alt="" width="880" height="300">
+                <img class="shot" src="images/feature-report.jpg" alt="スキャン結果を Markdown 保存またはコピーするイメージ" width="880" height="300" loading="lazy" decoding="async">
             </article>
         </div>
     </section>
@@ -463,7 +516,7 @@
         </div>
     </section>
 
-    <section class="faq">
+    <section class="faq" id="faq">
         <div class="container">
             <h2>FAQ</h2>
             <details open>
