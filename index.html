@@ -39,8 +39,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-Tech Vault Atlas v1.0.4 | フォルダと HUB の地図をスキャンする Obsidian プラグイン</title>
-    <meta name="description" content="K-Tech Vault Atlas は Obsidian 用コミュニティプラグイン（v1.0.4）。フォルダと HUB（MOC）をスキャンし、足りない地図をパネルのトグルで直します。ファイルが増えた人も、使い方が分からない人も、入口から辿れる状態にします。完全オフライン。無料・MIT。">
+    <title>K-Tech Vault Atlas v1.1.0 | フォルダと HUB の地図をスキャンする Obsidian プラグイン</title>
+    <meta name="description" content="K-Tech Vault Atlas は Obsidian 用コミュニティプラグイン（v1.1.0）。フォルダと HUB（MOC）をスキャンし、足りない地図をパネルのトグルで直します。ファイルが増えた人も、使い方が分からない人も、入口から辿れる状態にします。完全オフライン。無料・MIT。">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="K-Tech Studio">
     <meta name="theme-color" content="#7c3aed">
@@ -51,7 +51,7 @@
     <link rel="sitemap" type="application/xml" href="https://k-tech-vault-atlas-lp.vercel.app/sitemap.xml">
     <meta property="og:site_name" content="K-Tech Studio">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="K-Tech Vault Atlas v1.0.4 | Scan folder and hub maps in Obsidian">
+    <meta property="og:title" content="K-Tech Vault Atlas v1.1.0 | Scan folder and hub maps in Obsidian">
     <meta property="og:description" content="Obsidian community plugin. Scan folders and hub notes, then fix gaps with toggles. Built for vaults that got big, and for people still learning the layout. Offline. Free &amp; MIT.">
     <meta property="og:url" content="https://k-tech-vault-atlas-lp.vercel.app/">
     <meta property="og:image" content="https://k-tech-vault-atlas-lp.vercel.app/images/og.jpg">
@@ -63,7 +63,7 @@
     <meta property="og:locale:alternate" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@K_Tech_Dev">
-    <meta name="twitter:title" content="K-Tech Vault Atlas v1.0.4 | Scan folder and hub maps in Obsidian">
+    <meta name="twitter:title" content="K-Tech Vault Atlas v1.1.0 | Scan folder and hub maps in Obsidian">
     <meta name="twitter:description" content="Obsidian community plugin. Scan folders and hubs, then fix gaps one toggle at a time. Offline. Free &amp; MIT.">
     <meta name="twitter:image" content="https://k-tech-vault-atlas-lp.vercel.app/images/og.jpg">
     <meta name="twitter:image:alt" content="K-Tech Vault Atlas — ファイルが増えても、入口から辿れるようにする">
@@ -95,9 +95,9 @@
           "description": "Obsidian community plugin that scans folder and hub (MOC) layout, then lets you fix gaps from one panel with toggles, link append, Deep Scan, Folder Guide, and report export. Fully offline.",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Obsidian",
-          "softwareVersion": "1.0.4",
+          "softwareVersion": "1.1.0",
           "datePublished": "2026-09-18",
-          "dateModified": "2026-09-20",
+          "dateModified": "2026-10-04",
           "isAccessibleForFree": true,
           "license": "https://github.com/crossbeat461-a11y/K-Tech-Vault-Atlas/blob/main/LICENSE",
           "downloadUrl": "https://github.com/crossbeat461-a11y/K-Tech-Vault-Atlas/releases/latest",
@@ -373,7 +373,7 @@
         <div class="container">
             <div class="badges">
                 <span class="badge">K-Tech Studio</span>
-                <span class="badge badge-on">v1.0.4</span>
+                <span class="badge badge-on">v1.1.0</span>
                 <span class="badge"><span class="lang-ja">オフライン</span><span class="lang-en">Offline</span></span>
                 <span class="badge">MIT</span>
             </div>
@@ -506,6 +506,13 @@
             </article>
 
             <article class="feature">
+                <h3 class="lang-ja">HUB 記載ギャップ — フォルダと本文がずれていないか</h3>
+                <h3 class="lang-en">Hub list check — notes in the folder vs the hub body</h3>
+                <p class="lang-ja">通常スキャンで、フォルダ直下のノートが HUB に書いてあるかを見ます。未記載は確認したあと、その HUB だけ追記できます。本文からの削除はしません。手書きや Dataview の HUB は追記しません。</p>
+                <p class="lang-en">A quick scan checks whether notes in a folder are listed in that folder's hub. You can append missing notes to one hub at a time after confirm. Atlas never deletes hub body lines. Hand-written and Dataview hubs are not rewritten.</p>
+            </article>
+
+            <article class="feature">
                 <h3 class="lang-ja">Homepage 連携 — 起動ノートを入口にする</h3>
                 <h3 class="lang-en">Homepage integration — use the startup note as the entry</h3>
                 <p class="lang-ja">Homepage プラグインが入っていれば、起動ノート（kind: File）を Atlas の入口にできます。Homepage の設定は読み取るだけで、書き換えません。解決できないときは手動パス（既定 Home.md）に戻します。無ければ作成できます。</p>
@@ -622,7 +629,7 @@
                 <a href="https://buymeacoffee.com/k_tech_studio" target="_blank" rel="noopener noreferrer">☕ Buy Me a Coffee</a>
                 <a href="https://k-tech-lab.vercel.app/" target="_blank" rel="noopener noreferrer">K-Tech Studio</a>
             </div>
-            <p class="footer-copy">K-Tech Vault Atlas v1.0.4 · MIT · &copy; 2026 K-Tech Studio. Stay curious.</p>
+            <p class="footer-copy">K-Tech Vault Atlas v1.1.0 · MIT · &copy; 2026 K-Tech Studio. Stay curious.</p>
             <div class="footer-meta">
                 <button type="button" onclick="togglePolicy()" class="btn-inline-text">About this site</button>
             </div>
