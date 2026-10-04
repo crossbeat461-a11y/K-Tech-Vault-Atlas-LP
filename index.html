@@ -92,7 +92,7 @@
           "name": "K-Tech Vault Atlas",
           "url": "https://k-tech-vault-atlas-lp.vercel.app/",
           "image": "https://k-tech-vault-atlas-lp.vercel.app/images/og.jpg",
-          "description": "Obsidian community plugin that scans folder and hub (MOC) layout, then lets you fix gaps from one panel with toggles, link append, Deep Scan, Folder Guide, and report export. Fully offline.",
+          "description": "Obsidian community plugin that scans folder and hub (MOC) layout, then lets you fix gaps from one panel with toggles, link append, hub list check, Deep Scan, Folder Guide, and report export. Fully offline.",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Obsidian",
           "softwareVersion": "1.1.0",
@@ -102,7 +102,7 @@
           "license": "https://github.com/crossbeat461-a11y/K-Tech-Vault-Atlas/blob/main/LICENSE",
           "downloadUrl": "https://github.com/crossbeat461-a11y/K-Tech-Vault-Atlas/releases/latest",
           "installUrl": "https://obsidian.md/plugins?id=k-tech-vault-atlas",
-          "keywords": "Obsidian, vault, hub, MOC, folder scan, Deep Scan, offline",
+          "keywords": "Obsidian, vault, hub, MOC, folder scan, Deep Scan, hub list, offline",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY", "availability": "https://schema.org/InStock" },
           "author": { "@id": "https://k-tech-lab.vercel.app/#organization" }
         },
@@ -437,14 +437,14 @@
                 <div class="step">
                     <h3 class="lang-ja">リボンの地図アイコン、またはコマンド「Open Vault Atlas」</h3>
                     <h3 class="lang-en">Ribbon map icon, or command “Open Vault Atlas”</h3>
-                    <p class="lang-ja">パネルが開くと、まず通常スキャンが走ります。入口ノート、既存 HUB、推奨、リンク不足、保留が一覧になります。</p>
-                    <p class="lang-en">The panel runs a quick scan first. You get the entry note, existing hubs, recommendations, link gaps, and deferred folders.</p>
+                    <p class="lang-ja">パネルが開くと、まず通常スキャンが走ります。入口ノート、既存 HUB、推奨、リンク不足、記載ギャップ、保留が一覧になります。</p>
+                    <p class="lang-en">The panel runs a quick scan first. You get the entry note, existing hubs, recommendations, link gaps, hub list gaps, and deferred folders.</p>
                 </div>
                 <div class="step">
                     <h3 class="lang-ja">トグルで 1 フォルダずつ直す</h3>
                     <h3 class="lang-en">Fix one folder at a time with toggles</h3>
-                    <p class="lang-ja">ON で HUB 作成（確認あり）。OFF でゴミ箱へ（確認あり）。入口・external・保護中は消えません。親リンクと入口リンクはボタンで追記できます。</p>
-                    <p class="lang-en">ON creates a hub (with confirm). OFF sends it to trash (with confirm). Entry notes, external hubs, and protected hubs stay. Parent and entry links can be appended in one click.</p>
+                    <p class="lang-ja">ON で HUB 作成（確認あり）。OFF でゴミ箱へ（確認あり）。入口・external・保護中は消えません。親リンクと入口リンク、HUB の未記載はボタンで追記できます。</p>
+                    <p class="lang-en">ON creates a hub (with confirm). OFF sends it to trash (with confirm). Entry notes, external hubs, and protected hubs stay. Parent links, entry links, and missing hub list items can be appended after confirm.</p>
                 </div>
                 <div class="step">
                     <h3 class="lang-ja">構造が大きく変わったら Deep Scan</h3>
@@ -468,8 +468,8 @@
             <article class="feature">
                 <h3 class="lang-ja">通常スキャン — いまの地図を数字で見る</h3>
                 <h3 class="lang-en">Quick scan — see the map as a list</h3>
-                <p class="lang-ja">入口の有無、HUB の件数、推奨フォルダ、親 HUB からの未リンク、入口から未リンクの HUB、保留中のフォルダを一度に出します。Vault の外には何も送りません。</p>
-                <p class="lang-en">It lists whether the entry exists, hub counts, recommended folders, missing parent links, hubs not linked from the entry, and deferred folders. Nothing leaves the vault.</p>
+                <p class="lang-ja">入口の有無、HUB の件数、推奨フォルダ、親 HUB からの未リンク、入口から未リンクの HUB、フォルダ直下の未記載、保留中のフォルダを一度に出します。Vault の外には何も送りません。</p>
+                <p class="lang-en">It lists whether the entry exists, hub counts, recommended folders, missing parent links, hubs not linked from the entry, notes missing from a hub list, and deferred folders. Nothing leaves the vault.</p>
                 <img class="shot" src="images/feature-scan.jpg" alt="通常スキャンの件数とフォルダ一覧のイメージ" width="880" height="420" loading="lazy" decoding="async">
             </article>
 
@@ -510,6 +510,7 @@
                 <h3 class="lang-en">Hub list check — notes in the folder vs the hub body</h3>
                 <p class="lang-ja">通常スキャンで、フォルダ直下のノートが HUB に書いてあるかを見ます。未記載は確認したあと、その HUB だけ追記できます。本文からの削除はしません。手書きや Dataview の HUB は追記しません。</p>
                 <p class="lang-en">A quick scan checks whether notes in a folder are listed in that folder's hub. You can append missing notes to one hub at a time after confirm. Atlas never deletes hub body lines. Hand-written and Dataview hubs are not rewritten.</p>
+                <img class="shot" src="images/feature-hub-gap.jpg" alt="HUB 記載ギャップの未記載追記と、次回から出さない操作のイメージ" width="880" height="495" loading="lazy" decoding="async">
             </article>
 
             <article class="feature">
@@ -577,6 +578,14 @@
                 </summary>
                 <p class="lang-ja">HUB を OFF にしたときだけ、その HUB ファイルをゴミ箱へ移します。確認があります。通常のメモは対象外です。最終的な削除は Obsidian の「削除したファイル」設定に従います。</p>
                 <p class="lang-en">Only when you turn a hub OFF, that hub file goes to trash, after confirm. Ordinary notes are not targeted. Final delete follows Obsidian’s “Deleted files” setting.</p>
+            </details>
+            <details>
+                <summary>
+                    <span class="lang-ja">HUB の本文は自動で直しますか？</span>
+                    <span class="lang-en">Does it rewrite hub notes by itself?</span>
+                </summary>
+                <p class="lang-ja">しません。記載ギャップは通常スキャンで出します。未記載の追記は、確認したあと 1 件ずつです。本文にあるリンクは消しません。手書き（ロック）と Dataview の HUB は追記しません。</p>
+                <p class="lang-en">No. Hub list gaps show up on a quick scan. Missing notes are appended one hub at a time after confirm. Existing hub body lines are not deleted. Locked and Dataview hubs are not rewritten.</p>
             </details>
             <details>
                 <summary>
